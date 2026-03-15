@@ -17,7 +17,7 @@ from transformers import (
 from transformers.trainer_utils import PREFIX_CHECKPOINT_DIR
 
 from .vlm_model import VisionLanguageModel, VLMConfig
-from ...common.data_loader.vlm_dataloader import VLMDataset, VLMCollator
+from common.data_loader.vlm_dataloader import VLMDataset, VLMCollator
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)

@@ -11,15 +11,14 @@ from dataclasses import dataclass
 
 import torch
 from transformers import TrainingArguments
-from trl import (
-    DPOTrainer,
-    PPOTrainer,
-    AutoModelForCausalLMWithValueHead,
-)
+try:
+    from trl import DPOTrainer
+except ImportError:
+    DPOTrainer = None
 from peft import LoraConfig
 
-from ..models.base_model import LLMModel
-from ...common.data_loader.llm_dataloader import PreferenceDataset
+from llm_training.models.base_model import LLMModel
+from common.data_loader.llm_dataloader import PreferenceDataset
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)

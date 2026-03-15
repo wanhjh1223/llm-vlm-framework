@@ -37,7 +37,7 @@ from accelerate import Accelerator
 from accelerate.utils import set_seed
 
 # 导入数据加载器
-from .pretrain_dataloader import PretrainDataset, PretrainDataConfig
+from llm_training.data.pretrain_dataloader import PretrainDataset, PretrainDataConfig
 
 logging.basicConfig(
     level=logging.INFO,

@@ -21,8 +21,8 @@ from transformers import (
 )
 from datasets import Dataset
 
-from ..models.base_model import LLMModel
-from ...common.data_loader.llm_dataloader import LLMDataset, SFTDataset
+from llm_training.models.base_model import LLMModel
+from common.data_loader.llm_dataloader import SFTDataset
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
